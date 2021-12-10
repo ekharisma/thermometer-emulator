@@ -19,7 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='payload',
   syntax='proto3',
   serialized_options=None,
-  serialized_pb=_b('\n\rpayload.proto\x12\x07payload\"=\n\x07Payload\x12\n\n\x02id\x18\x01 \x01(\x05\x12\x13\n\x0btemperature\x18\x02 \x01(\x05\x12\x11\n\ttimestamp\x18\x03 \x01(\t\"*\n\x08Payloads\x12\x1e\n\x04\x64\x61ta\x18\x01 \x03(\x0b\x32\x10.payload.Payloadb\x06proto3')
+  serialized_pb=_b('\n\rpayload.proto\x12\x07payload\"=\n\x07Payload\x12\x13\n\x0btemperature\x18\x01 \x01(\x05\x12\x11\n\ttimestamp\x18\x02 \x01(\t\x12\n\n\x02id\x18\x03 \x01(\x05\x62\x06proto3')
 )
 
 
@@ -33,23 +33,23 @@ _PAYLOAD = _descriptor.Descriptor(
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='id', full_name='payload.Payload.id', index=0,
+      name='temperature', full_name='payload.Payload.temperature', index=0,
       number=1, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='temperature', full_name='payload.Payload.temperature', index=1,
-      number=2, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
+      name='timestamp', full_name='payload.Payload.timestamp', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='timestamp', full_name='payload.Payload.timestamp', index=2,
-      number=3, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
+      name='id', full_name='payload.Payload.id', index=2,
+      number=3, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
@@ -69,40 +69,7 @@ _PAYLOAD = _descriptor.Descriptor(
   serialized_end=87,
 )
 
-
-_PAYLOADS = _descriptor.Descriptor(
-  name='Payloads',
-  full_name='payload.Payloads',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='data', full_name='payload.Payloads.data', index=0,
-      number=1, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=89,
-  serialized_end=131,
-)
-
-_PAYLOADS.fields_by_name['data'].message_type = _PAYLOAD
 DESCRIPTOR.message_types_by_name['Payload'] = _PAYLOAD
-DESCRIPTOR.message_types_by_name['Payloads'] = _PAYLOADS
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 Payload = _reflection.GeneratedProtocolMessageType('Payload', (_message.Message,), dict(
@@ -111,13 +78,6 @@ Payload = _reflection.GeneratedProtocolMessageType('Payload', (_message.Message,
   # @@protoc_insertion_point(class_scope:payload.Payload)
   ))
 _sym_db.RegisterMessage(Payload)
-
-Payloads = _reflection.GeneratedProtocolMessageType('Payloads', (_message.Message,), dict(
-  DESCRIPTOR = _PAYLOADS,
-  __module__ = 'payload_pb2'
-  # @@protoc_insertion_point(class_scope:payload.Payloads)
-  ))
-_sym_db.RegisterMessage(Payloads)
 
 
 # @@protoc_insertion_point(module_scope)

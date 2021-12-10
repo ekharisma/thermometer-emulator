@@ -4,7 +4,8 @@ from protobuf import payload_pb2
 from paho.mqtt import client as mqtt
 
 def read_temperature(index: int):
-    temperature = [i for i in range(25, 35)]
+    temperature = [i for i in range(25, 36)]
+    print(temperature)
     return temperature[index]
 
 
@@ -15,7 +16,7 @@ def read_timestamp():
 def build_payload_pkg(id: int):
     payload_pkg = payload_pb2.Payload()
     payload_pkg.id = id
-    payload_pkg.temperature = read_temperature(id % 10)
+    payload_pkg.temperature = read_temperature(id % 11)
     payload_pkg.timestamp = read_timestamp()
     return payload_pkg
 
