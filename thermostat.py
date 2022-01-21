@@ -26,7 +26,7 @@ def on_connect(client, userdata, flags, rc):
 
 mqtt_conn = mqtt.Client()
 mqtt_conn.on_connect = on_connect
-mqtt_conn.connect("broker.hivemq.com")
+mqtt_conn.connect("localhost")
 mqtt_conn.loop_start()
 id = 0
 while True:
