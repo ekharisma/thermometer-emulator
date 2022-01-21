@@ -28,3 +28,7 @@ If you also want to know thermostat.py in action, you can run receiver.py file:
 ```bash
 python3 receiver.py
 ```
+Subcription on:
+```
+iot/thermostat
+```
